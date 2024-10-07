@@ -1,4 +1,4 @@
-package classwork;
+package classwork_18;
 
 public class StringAppl {
     public static void main(String[] args) {

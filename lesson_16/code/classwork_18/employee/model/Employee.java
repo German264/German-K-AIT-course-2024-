@@ -1,4 +1,4 @@
-package classwork.employee.model;
+package classwork_18.employee.model;
 
 //- создадим класс Employee (работник):
 //  - поля
@@ -8,8 +8,6 @@ package classwork.employee.model;
 //- создадим класс FirmaAppl, в котором:
 //  - создаем объекты типа Employee
 //  - определим зарплату и вычислим ее общую сумму.
-
-import javax.xml.namespace.QName;
 
 public class Employee {
 

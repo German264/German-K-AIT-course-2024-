@@ -36,7 +36,6 @@ public class PetAppl {
         myPet2.walk();
         System.out.println();
 
-
         myPet3.sleep();
         myPet3.eat();
         myPet3.makeSound();

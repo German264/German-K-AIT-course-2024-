@@ -1,4 +1,4 @@
-package classwork._car_object.model;
+package classwork_18._car_object.model;
 
 public class Car {
 

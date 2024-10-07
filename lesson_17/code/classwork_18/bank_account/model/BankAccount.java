@@ -1,4 +1,4 @@
-package classwork.bank_account.model;
+package classwork_18.bank_account.model;
 
 //- Реализуем класс BankAccount:
 //  - поля: account, owner, bank, branch, balance
