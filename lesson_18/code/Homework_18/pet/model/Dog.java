@@ -1,7 +1,5 @@
 package Homework_18.pet.model;
 
-import Homework_18.pet.Pet;
-
 public class Dog extends Pet {
 
     // Заполняем поля

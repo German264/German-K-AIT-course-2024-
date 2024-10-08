@@ -1,4 +1,7 @@
-package Homework_18.pet.model;
+package Homework_18.pet;
+
+import Homework_18.pet.model.Cat;
+import Homework_18.pet.model.Dog;
 
 //Задача 1. В классе Pet имеются поля:
 //id
