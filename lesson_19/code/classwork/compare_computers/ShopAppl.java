@@ -1,4 +1,4 @@
-package compare_computers;
+package classwork.compare_computers;
 
 import Homework_18.computer_shop.model.Computer;
 import Homework_18.computer_shop.model.Laptop;
@@ -31,7 +31,7 @@ public class ShopAppl {
         computers[2] = new Computer("AMD", 8, 256, "NoName", 2000); //no casting
         computers[3] = new Laptop("AMD", 8, 256, "MacBook", 2000, 14, 1.5, 10, "white"); //down casting
         computers[4] = new Laptop("AMD", 8, 512, "MacBook Air", 2500, 14.2, 2.8, 12, "blau");
-        computers[5] = new compare_computers.Smartphone("AMD", 8, 512, "MacBook Air", 2500, 14.2, 1.8, 12, "blau", 5876567567576767679L);
+        computers[5] = new classwork.compare_computers.Smartphone("AMD", 8, 512, "MacBook Air", 2500, 14.2, 1.8, 12, "blau", 5876567567576767679L);
 
         double totalWeight = 0;
         for (int i = 0; i < computers.length; i++){

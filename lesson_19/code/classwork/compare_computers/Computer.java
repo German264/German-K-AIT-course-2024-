@@ -1,4 +1,4 @@
-package compare_computers;
+package classwork.compare_computers;
 
 import java.util.Objects;
 

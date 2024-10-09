@@ -1,4 +1,4 @@
-package compare_computers;
+package classwork.compare_computers;
 //Сравнение двух объектов типа Computer. Использование метода equals для сравнения объектов.
 import java.util.Scanner;
 

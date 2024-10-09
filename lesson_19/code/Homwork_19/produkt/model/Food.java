@@ -24,8 +24,6 @@ public class Food extends Produkt{
         return "Food{" +
                 "expDate='" + expDate + '\'' +
                 "} " + super.toString();
-
-
     }
 
     @Override

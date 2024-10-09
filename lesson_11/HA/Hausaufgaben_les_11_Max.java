@@ -31,5 +31,6 @@ public class Hausaufgaben_les_11_Max {
             System.out.print(array[i] + " ");
         }
         System.out.println();
+
     }
 }

@@ -12,6 +12,7 @@ package Homwork_19.produkt;
 //печатающий все продукты из массива, и
 //метод возвращающий сумму цен всех продуктов.
 
+import Homwork_19.produkt.model.Food;
 import Homwork_19.produkt.model.MeatFood;
 import Homwork_19.produkt.model.MilkFood;
 import Homwork_19.produkt.model.Produkt;
@@ -68,9 +69,12 @@ public class MarketAppl {
         //Задача 3. (*) В классе MarketAppl создать метод печатающий в консоль все не пищевые продукты.
 
         // Сравнение по сроку годности
-      /*  for (int i = 0; i < produkt.length; i++) {
-            if (produkt[i].getExpDate() == null) {
-                foundProdukt = produkt[i];
+        for (int i = 0; i < produkt.length; i++) {
+            if(produkt[i] instanceof Food){
+                Food food = (Food) produkt[i];
+                if(((Food) produkt[i]).getExpDate() == null){
+                    System.out.println(produkt[i]);
+                }
             }
         }
         //Вывод результата поиска
@@ -78,6 +82,6 @@ public class MarketAppl {
             System.out.println("Не пищевые продукты: " + foundProdukt);
         } else {
             System.out.println("Все продукты пищевые.");
-        }*/
+        }
     }
 }
