@@ -20,7 +20,7 @@ class MaxAndIndexTest {
         int expectedIndex = 5; // Ожидаемый индекс максимального элемента (значение 66)
 
         // actual
-        int[] result = maxAndIndex.findMaxAndIndex(); // Вызов метода для получения массива {maxValue, index}
+        int[] result = maxAndIndex.findMaxAndIndex(); // Вызов метода для получения массива (макс.значение, index)
         int actualIndex = result[1]; // Получаем индекс максимального элемента из результата
 
         // Проверка, соответствует ли фактический индекс ожидаемому
