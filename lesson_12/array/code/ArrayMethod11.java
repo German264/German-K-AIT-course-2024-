@@ -18,7 +18,7 @@ public class ArrayMethod11 {
     }
 
     //linear search, return index (if element absent return -1)
-    //Чем больше элементов массива, тем дольшу работает метод
+    //Чем больше элементов массива, тем дольше работает метод
     public static int linearSearch(int[]array, int n){
         for (int i = 0; i < array.length; i++){
             if (array[i] == n){

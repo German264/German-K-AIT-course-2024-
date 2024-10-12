@@ -1,4 +1,4 @@
-package classwork_18.employee.model;
+package classwork_16.employee.model;
 
 //- создадим класс Employee (работник):
 //  - поля

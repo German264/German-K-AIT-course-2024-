@@ -1,6 +1,6 @@
-package classwork_18.employee;
+package classwork_16.employee;
 
-import classwork_18.employee.model.Employee;
+import classwork_16.employee.model.Employee;
 
 public class FirmaAppl {
     public static void main(String[] args) {
