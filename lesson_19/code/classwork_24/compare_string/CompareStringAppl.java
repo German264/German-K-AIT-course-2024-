@@ -1,4 +1,4 @@
-package classwork.compare_string;
+package classwork_24.compare_string;
 
 //равенство строк - как понять?
 public class CompareStringAppl {

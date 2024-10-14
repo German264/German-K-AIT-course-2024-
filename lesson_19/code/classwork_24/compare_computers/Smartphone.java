@@ -1,4 +1,4 @@
-package classwork.compare_computers;
+package classwork_24.compare_computers;
 
 import Homework_18.computer_shop.model.Laptop;
 
