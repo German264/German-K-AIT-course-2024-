@@ -1,4 +1,4 @@
-package classwork_23.book_library.model;
+package classwork_24.book_library.model;
 
 // Создать класс Book с полями:
 // long isbn, String title, String author, int yearOfPublishing.
@@ -6,9 +6,7 @@ package classwork_23.book_library.model;
 
 import java.util.Objects;
 
-public class Book {
-
-    public static final int ISBN_LENGTH = 13;
+public class Book { public static final int ISBN_LENGTH = 13;
 
     // field
     private String title;
@@ -37,10 +35,10 @@ public class Book {
     }
 
     private boolean countDigit(long isbn) {
-        //   - хороший подход, требуется много ресурсов
+        //  String.valueOf(isbn).length() == 13 - хороший подход, требуется много ресурсов
         // можно циклом for так как известно сколько раз он должен отработать
         int count = 0;
-        long temp = isbn; //чтобы не испортить значение isbn
+        long temp = isbn; // чтобы не "испортить" значение isbn
         while ((temp != 0)) {
             temp = temp / 10;
             count++;
@@ -54,10 +52,13 @@ public class Book {
 
     // TODO предусмотреть защиту по поводу 13 цифр и в этом случае
     public void setIsbn(long isbn) {
-        if (checkIsbn(isbn) > 0) {
-        }else {
-            System.out.println("isbn is not correkt.");
+        if(checkIsbn(isbn) > 0){
+            this.isbn = checkIsbn(isbn);
+        } else {
+            System.out.println("ISBN is not correct.");
         }
+
+
     }
 
     public int getYearOfPublishing() {

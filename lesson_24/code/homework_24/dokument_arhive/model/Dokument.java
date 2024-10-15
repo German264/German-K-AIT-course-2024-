@@ -1,9 +1,12 @@
-package homework_23.dokument_arhive.controller;
+package homework_24.dokument_arhive.model;
+
+// Создать класс Dokument с полями:
+// long id, String title, String author, int yearOfPublishing.
+// Проверить ID на корректное количество цифр = 10.
 
 import java.util.Objects;
 
-public class Archive {
-
+public class Dokument {
     public static final int ID_LENGTH = 10;
 
     // field
@@ -13,25 +16,27 @@ public class Archive {
     private int yearOfPublishing;
 
     // constructor
-    public Archive(String title, String author, long id, int yearOfPublishing) {
+
+    public Dokument(String title, String author, long id, int yearOfPublishing) {
         this.title = title;
         this.author = author;
-        //this.id = id;
         this.yearOfPublishing = yearOfPublishing;
+
         this.id = checkId(id);
     }
-
     private long checkId(long id) {
-    // проверить длину id по кол-ву цифр в этом числе
-         if (countDigit(id)){
-             return id;
-         }
-         return  -1;// сигнал того, что isbn неверный
+        // проверить длину id по кол-ву цифр в этом числе
+        if (countDigit(id)){
+            return id;
+        }
+        return  -1;// сигнал того, что id неверный
     }
 
     private boolean countDigit(long id) {
         int count = 0;
-        while ((id / 10 != 0)) {
+        long temp = id; // чтобы не "испортить" значение id
+        while ((temp != 0)) {
+            temp = temp / 10;
             count++;
         }
         return count == ID_LENGTH;
@@ -43,7 +48,11 @@ public class Archive {
 
     // TODO предусмотреть защиту по поводу 10 цифр и в этом случае
     public void setId(long id) {
-        this.id = id;
+        if(checkId(id) > 0){
+            this.id = checkId(id);
+        } else {
+            System.out.println("ISBN is not correct.");
+        }
     }
 
     public String getTitle() {
@@ -73,8 +82,8 @@ public class Archive {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof Archive archive)) return false;
-        return id == archive.id;
+        if (!(o instanceof Dokument dokument)) return false;
+        return id == dokument.id;
     }
 
     @Override
@@ -84,7 +93,7 @@ public class Archive {
 
     @Override
     public String toString() {
-        final StringBuilder sb = new StringBuilder("Archive{");
+        final StringBuilder sb = new StringBuilder("Dokument{");
         sb.append("title='").append(title).append('\'');
         sb.append(", author='").append(author).append('\'');
         sb.append(", id=").append(id);

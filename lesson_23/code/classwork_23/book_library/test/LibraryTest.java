@@ -18,6 +18,8 @@ class LibraryTest {
     void setUp() {
 
         library = new Library(5);
+        books = new Book[5];
+
         books[0] = new Book("1984", "Oruell", 1_111_111_111_110L, 2010);
         books[1] = new Book("T1", "A1", 1_111_111_111_111L, 2011);
         books[2] = new Book("T2", "A2", 1_111_111_111_112L, 2009);
@@ -25,6 +27,10 @@ class LibraryTest {
 
         // TODO
         //положить объекты в массив, который "внутри" объекта library
+        for (int i = 0; i < books.length - 1; i++) {  //пока 4 (size = 4)// книги кладем в библеотеку
+
+
+        }
 
     }
 

@@ -1,5 +1,15 @@
 package classwork_23.book_library.controller;
 
+//Реализовать методы:
+//- печать списка всех книг в библиотеке;
+//- получение кол-ва книг в библиотеке;
+//- поиска книги по ISBN;
+//- добавление книги в библиотеку с учетом требований:
+//  - не добавлять null
+//  - не добавлять дубликат
+//  - не добавлять больше, чем может вместить в себя библиотека.
+//- удаление книги из библиотеки.
+
 import classwork_23.book_library.model.Book;
 
 public class Library {
@@ -17,10 +27,13 @@ public class Library {
 
     // CRUD methods
 
-    // boolean addBook(Book book)
-    // size++
+    boolean addBook(Book book){
+        return false;
+    }
+
 
     // void printBooks()
+   // public void printBook
 
 
     public Book findBook(long isbn){
