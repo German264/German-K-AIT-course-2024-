@@ -1,5 +1,6 @@
 package classwork_24.book_library.test;
 
+
 import classwork_24.book_library.controller.Library;
 import classwork_24.book_library.model.Book;
 import org.junit.jupiter.api.BeforeEach;
@@ -79,5 +80,13 @@ class LibraryTest {
     void printBooksTest(){
         System.out.println("=========================");
         library.printBooks();
+    }
+
+    @Test
+    void updateBookTest(){
+        Book newBook = new Book("New book", "Super Puper", 1_111_111_111_114L, 2025);
+        library.addBook(newBook);
+        // library.update
+
     }
 }
