@@ -6,7 +6,9 @@ package classwork_24.book_library.model;
 
 import java.util.Objects;
 
-public class Book { public static final int ISBN_LENGTH = 13;
+public class Book {
+
+    public static final int ISBN_LENGTH = 13;
 
     // field
     private String title;
