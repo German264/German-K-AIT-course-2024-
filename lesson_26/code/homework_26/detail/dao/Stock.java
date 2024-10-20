@@ -8,7 +8,6 @@ package homework_26.detail.dao;
 //средняя масса деталей на складе
 
 
-import classwork_26.employee.model.Employee;
 import homework_26.detail.model.Detail;
 
 public interface Stock {

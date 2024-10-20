@@ -1,7 +1,7 @@
-package classwork_26.employee.dao;
+package classwork_26.ait.employee.dao;
 
 
-import classwork_26.employee.model.Employee;
+import classwork_26.ait.employee.model.Employee;
 
 public class CompanyImpl implements Company{
 

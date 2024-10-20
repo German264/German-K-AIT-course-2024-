@@ -1,15 +1,13 @@
-package classwork_26.employee.test;
+package classwork_26.ait.employee.test;
 
-import classwork_26.employee.dao.Company;
-import classwork_26.employee.dao.CompanyImpl;
-import classwork_26.employee.model.Employee;
-import classwork_26.employee.model.Manager;
-import classwork_26.employee.model.SalesManager;
-import classwork_26.employee.model.Worker;
+import classwork_26.ait.employee.dao.Company;
+import classwork_26.ait.employee.dao.CompanyImpl;
+import classwork_26.ait.employee.model.Employee;
+import classwork_26.ait.employee.model.Manager;
+import classwork_26.ait.employee.model.SalesManager;
+import classwork_26.ait.employee.model.Worker;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class CompanyImplTest {
 

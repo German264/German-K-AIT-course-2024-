@@ -1,4 +1,4 @@
-package classwork_26.employee.model;
+package classwork_27.ait.employee.model;
 
 public class Manager extends Employee {
 
