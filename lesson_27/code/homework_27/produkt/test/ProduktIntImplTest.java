@@ -71,14 +71,14 @@ class ProduktIntImplTest {
 
     @Test
     void allCostProduktTest() {
-        double expectedTotalCost = prod[0].getPrice() + prod[1].getPrice() + prod[2].getPrice(); // Считаем ожидаемую общую стоимость
+        double expectedTotalCost = prod[0].getPrice() + prod[1].getPrice() + prod[2].getPrice() + prod[3].getPrice(); // Считаем ожидаемую общую стоимость
         assertEquals(expectedTotalCost, food.allCostProdukt()); // Сравниваем с общей стоимостью
     }
 
     @Test
     void averageCostProduktTest() {
-        double expectedTotalCost = prod[0].getPrice() + prod[1].getPrice() + prod[2].getPrice(); // Считаем ожидаемую общую стоимость
-        double expectedAverageCost = expectedTotalCost / 3; // Ожидаемая средняя стоимость
+        double expectedTotalCost = prod[0].getPrice() + prod[1].getPrice() + prod[2].getPrice()+ prod[3].getPrice(); // Считаем ожидаемую общую стоимость
+        double expectedAverageCost = expectedTotalCost / size; // Ожидаемая средняя стоимость
         assertEquals(expectedAverageCost, food.averageCostProdukt()); // Сравниваем с средней стоимостью
     }
 

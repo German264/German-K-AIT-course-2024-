@@ -22,9 +22,9 @@ class CompanyImplTest {
     company = new CompanyImpl(5);
     //fill array to fill object company
     emp = new Employee[4];
-        emp[0] = new Manager(1, "N1", "L1", 160, 5000, 25);
+        emp[0] = new Manager(1, "N1", "L1", 170, 5000, 25);
         emp[1] = new SalesManager(2, "N2", "L2", 160, 50000, 0.1);
-        emp[2] = new SalesManager(3, "N3", "L3", 160, 80000, 0.15);
+        emp[2] = new SalesManager(3, "N3", "L3", 180, 80000, 0.15);
         emp[3] = new Worker(4, "N4", "L4", 160, 20);
 
         // TODO поместить объекты emp[] в объект company с помощью метода addEmployee
@@ -87,17 +87,38 @@ class CompanyImplTest {
 
     @Test
     void totalSalaryTest() {
+        double totalSalary = 29450;
+        assertEquals(totalSalary, company.totalSalary());
     }
 
     @Test
     void totalSalesTest() {
+        assertEquals(130000, company.totalSales());
+    }
+    @Test
+    void averageSalaryTest(){
+        double expectetTotalSalary = emp[0].calcSalary() + emp[1].calcSalary() + emp[2].calcSalary() + emp[3].calcSalary();
+        double expectetAverageSalary = expectetTotalSalary /4;
+        assertEquals(expectetAverageSalary, company.averageSalary());
     }
 
     @Test
     void findEmployeeHoursGreaterThanTest() {
+        Employee[] expected = {emp[0], emp[2]};
+        Employee[] actual = company.findEmployeeHoursGreaterThan(160);
+        assertArrayEquals(expected, actual);
     }
 
     @Test
     void findEmployeeSalaryRangeTest() {
+        Employee[] expected = {emp[0], emp[1]};
+        Employee[] actual = company.findEmployeeSalaryRange(3500, 10000);
+        assertArrayEquals(expected, actual);
+    }
+    @Test
+    void printEmployeeSalariesTest() {
+        for (Employee employee : emp) {
+            System.out.println("Employee ID: " + employee.getId() + ", Salary: " + employee.calcSalary());
+        }
     }
 }

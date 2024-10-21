@@ -4,12 +4,24 @@ import java.util.Objects;
 
 public abstract class Employee {
 
+    public static int normHours = 160;
+    protected static double minSalare = 3500;
+    protected static double maxSalare = 10000;
     protected static double minWage = 12.48;
     protected final int id;
     protected String name;
     protected String secondName;
     protected double hours;
 
+    public static int getNormHours() {
+        return normHours;
+    }
+    public static double getMinSalare() {
+        return minSalare;
+    }
+    public static double getMaxSalare() {
+        return maxSalare;
+    }
     public static double getMinWage() {
         return minWage;
     }

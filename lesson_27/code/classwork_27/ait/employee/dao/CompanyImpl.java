@@ -2,6 +2,9 @@ package classwork_27.ait.employee.dao;
 
 
 import classwork_27.ait.employee.model.Employee;
+import classwork_27.ait.employee.model.SalesManager;
+
+import static classwork_27.ait.employee.model.Employee.normHours;
 
 public class CompanyImpl implements Company {
 
@@ -76,21 +79,69 @@ public class CompanyImpl implements Company {
 
     @Override
     public double totalSalary() {
-        return 0;
+        double totalSalary = 0;
+        for (int i = 0; i < size; i++) {
+            totalSalary += employees[i].calcSalary();
+        }
+        return totalSalary;
     }
 
     @Override
     public double totalSales() {
-        return 0;
+        double totalSales = 0;
+        for (int i = 0; i < size; i++) {
+            if (employees[i] instanceof SalesManager) { //проверка перед кастингом
+               SalesManager sm = (SalesManager) employees[i];
+               totalSales += sm.getSalesValue();
+            }
+        }
+        return totalSales;
+    }
+
+    @Override
+    public double averageSalary() {
+        if (employees == null) {
+            return 0;
+        }
+        double Salary = totalSalary();
+            return totalSalary() / size;
     }
 
     @Override
     public Employee[] findEmployeeHoursGreaterThan(int hours) {
-        return new Employee[0];
+        int count = 0;
+        for (int i = 0; i < size; i++) {
+            if (employees[i].getHours() > normHours) {
+                count++;
+            }
+        }
+        Employee[] result = new Employee[count];
+        int index = 0;
+        for (int i = 0; i < size; i++) {
+            if (employees[i].getHours() > normHours) {
+                result[index++] = employees[i];
+            }
+        }
+        return result;
     }
 
     @Override
-    public Employee[] findEmployeeSalaryRange(double min, double max) {
-        return new Employee[0];
+    public Employee[] findEmployeeSalaryRange(double minSalare, double maxSalare) {
+        int count = 0;
+        for (int i = 0; i < size; i++) {
+            double salary = employees[i].calcSalary();
+            if (salary >= minSalare && salary <= maxSalare) {
+                count++;
+            }
+        }
+        Employee[] result = new Employee[count];
+        int index = 0;
+        for (int i = 0; i < size; i++) {
+            double salary = employees[i].calcSalary();
+            if (salary >= minSalare && salary <= maxSalare) {
+                result[index++] = employees[i];
+            }
+        }
+        return result;
     }
 }
