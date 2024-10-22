@@ -1,11 +1,11 @@
-package classwork_27.ait.employee.test;
+package classwork_28.employee.test;
 
-import classwork_27.ait.employee.dao.Company;
-import classwork_27.ait.employee.dao.CompanyImpl;
-import classwork_27.ait.employee.model.Employee;
-import classwork_27.ait.employee.model.Manager;
-import classwork_27.ait.employee.model.SalesManager;
-import classwork_27.ait.employee.model.Worker;
+import classwork_28.employee.dao.Company;
+import classwork_28.employee.dao.CompanyImpl;
+import classwork_28.employee.model.Employee;
+import classwork_28.employee.model.Manager;
+import classwork_28.employee.model.SalesManager;
+import classwork_28.employee.model.Worker;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -97,7 +97,7 @@ class CompanyImplTest {
     }
     @Test
     void averageSalaryTest(){
-        double expectetTotalSalary = emp[0].calcSalary() + emp[1].calcSalary() + emp[2].calcSalary() + emp[3].calcSalary();  ///?????????
+        double expectetTotalSalary = emp[0].calcSalary() + emp[1].calcSalary() + emp[2].calcSalary() + emp[3].calcSalary();
         double expectetAverageSalary = expectetTotalSalary /4;
         assertEquals(expectetAverageSalary, company.averageSalary());
     }

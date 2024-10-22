@@ -1,8 +1,8 @@
-package classwork_27.ait.employee.dao;
+package classwork_28.employee.dao;
 
 
-import classwork_27.ait.employee.model.Employee;
-import classwork_27.ait.employee.model.SalesManager;
+import classwork_28.employee.model.Employee;
+import classwork_28.employee.model.SalesManager;
 
 import static classwork_27.ait.employee.model.Employee.normHours;
 
@@ -99,11 +99,11 @@ public class CompanyImpl implements Company {
     }
 
     @Override
-    public double averageSalary() {    //???????
+    public double averageSalary() {
         if (employees == null) {
             return 0;
         }
-        double Salary = totalSalary();//???????
+        double Salary = totalSalary();//???
             return totalSalary() / size;
     }
 
