@@ -1,6 +1,6 @@
-package homework_24.dokument_arhive.model;
+package homework_32_marafon.dokument_arhive.model;
 
-// Создать клас Dokument с полями:
+// Создать класс Dokument с полями:
 // long id, String title, String author, int yearOfPublishing.
 // Проверить ID на корректное количество цифр = 10.
 
