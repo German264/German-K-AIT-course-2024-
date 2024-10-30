@@ -34,6 +34,14 @@ class CalendarImplTest {
         events[1] = new Event(now.minusDays(4));
         events[2] = new Event(now.minusDays(6));
         events[3] = new Event(now.minusDays(8));
+
+        // TODO add photos to calendar
+        for (int i = 0; i < 4; i++) {
+            calendar.addEvent(events[i]);
+        }
+        for (Event e : events) {
+            System.out.println(e);
+        }
     }
 
     @Test
