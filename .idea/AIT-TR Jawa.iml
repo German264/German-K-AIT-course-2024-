@@ -35,6 +35,7 @@
       <sourceFolder url="file://$MODULE_DIR$/lesson_33_Enum/code" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/lesson_34_Time/code" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/lesson_35_album/code" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/lesson_36_collection_and_iterator/code" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

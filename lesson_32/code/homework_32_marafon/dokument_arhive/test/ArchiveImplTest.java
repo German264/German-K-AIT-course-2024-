@@ -1,5 +1,6 @@
 package homework_32_marafon.dokument_arhive.test;
 
+import homework_32_marafon.dokument_arhive.dao.Archive;
 import homework_32_marafon.dokument_arhive.dao.ArchiveImpl;
 import homework_32_marafon.dokument_arhive.model.Dokument;
 import org.junit.jupiter.api.BeforeEach;
@@ -9,14 +10,14 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class ArchiveImplTest {
 
-    ArchiveImpl archive;
+    Archive archive;
     Dokument[] dokuments;
-    int size = 0;
+    // int size = 0;
 
     @BeforeEach
     void setUp() {
         archive = new ArchiveImpl(5);
-        dokuments = new Dokument[5];
+        dokuments = new Dokument[4];
 
         dokuments[0] = new Dokument("T0", "A0", 1_111_111_110L, 2010);
         dokuments[1] = new Dokument("T1", "A1", 1_111_111_111L, 2011);

@@ -15,22 +15,6 @@ public class ArchiveImpl implements Archive {
         this.size = 0;
     }
 
-    public Dokument[] getDokuments() {
-        return dokuments;
-    }
-
-    public void setDokuments(Dokument[] dokuments) {
-        this.dokuments = dokuments;
-    }
-
-    public int getSize() {
-        return size;
-    }
-
-    public void setSize(int size) {
-        this.size = size;
-    }
-
     // CRUD methods
 
     @Override
