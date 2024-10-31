@@ -1,9 +1,5 @@
 package homework_32_marafon.pet.test;
 
-import classwork_32.employee.model.Employee;
-import classwork_32.employee.model.SalesManager;
-import classwork_32.employee.model.Worker;
-import homework_32_marafon.dokument_arhive.model.Dokument;
 import homework_32_marafon.pet.dao.House;
 import homework_32_marafon.pet.dao.HouseImpl;
 import homework_32_marafon.pet.model.Cat;
@@ -47,13 +43,13 @@ public class HouseImplTest {        //???????????? public
         assertFalse(house.addPet(null));
         // can't add duplicate
         assertFalse(house.addPet(pets[1]));
-        // can add new one employee
+        // can add new one pet
         Pet newPets = new Dog(07, "собака", 8, "Кабысдох", "дворняга", 80, 7);
         assertTrue(house.addPet(newPets));
         // check size
         assertEquals(7, house.size());
-        // can't add one more employee
-        Pet oneMorePets = new Cat(10, "кот", 10, "Мурзик", "сфинкс", 35, 4);   //????????????????????????????????????????????????????????????????????????????????????????????????????????????????????
+        // can't add one more pet
+        Pet oneMorePets = new Cat(8, "кот", 10, "Мурзик", "сфинкс", 35, 4);
         assertFalse(house.addPet(oneMorePets));
     }
 
@@ -64,9 +60,9 @@ public class HouseImplTest {        //???????????? public
 
     @Test
     public void findPetByNicknameTest() {
-        Pet[] expected = {pets[1]};
-        Pet[] actual = house.findPetByNickname("Бобик");
-        assertArrayEquals(expected, actual);
+        Pet expected = pets[1];
+        Pet actual = house.findPetByNickname("Бобик");
+        assertEquals(expected, actual);
     }
 
     @Test
@@ -90,7 +86,7 @@ public class HouseImplTest {        //???????????? public
         // check size
         assertEquals(5, house.size());
         // can't remove absent
-        assertNull(house.removePet(11));  //????????????????????????????????????
+        assertNull(house.removePet(8));
     }
 
     @Test

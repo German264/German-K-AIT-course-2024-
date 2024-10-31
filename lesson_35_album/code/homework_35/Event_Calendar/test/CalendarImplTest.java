@@ -47,7 +47,7 @@ class CalendarImplTest {
     @Test
     void testAddEvent() {
         assertFalse(calendar.addEvent(null));
-        assertFalse(calendar.addEvent(events[1]));
+        assertFalse(calendar.addEvent(events[0]));
         Event event = new Event(now.minusDays(7));
         assertTrue(calendar.addEvent(event));
         assertEquals(5, calendar.size());
@@ -85,7 +85,7 @@ class CalendarImplTest {
     @Test
     void testGetEventBetweenDate() {
         LocalDate today = LocalDate.now();
-        Event[] actual = calendar.getEventBetweenDate(today.minusDays(4), today.minusDays(7));
+        Event[] actual = calendar.getEventBetweenDate(today.minusDays(7), today.minusDays(4));
         Arrays.sort(actual, comparator);
         Event[] expected = {events[2], events[1]};
         Arrays.sort(expected, comparator);

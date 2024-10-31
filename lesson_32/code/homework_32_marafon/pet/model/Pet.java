@@ -1,5 +1,7 @@
 package homework_32_marafon.pet.model;
 
+import java.util.Objects;
+
 public abstract class Pet {
 
     // Заполняем поля
@@ -57,5 +59,17 @@ public abstract class Pet {
                 ", age=" + age +
                 ", nickname='" + nickname + '\'' +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Pet pet)) return false;
+        return id == pet.id && age == pet.age && Objects.equals(species, pet.species) && Objects.equals(nickname, pet.nickname);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, species, age, nickname);
     }
 }

@@ -5,6 +5,7 @@ import album.model.Photo;
 import java.time.LocalDate;
 import java.util.Arrays;
 import java.util.Comparator;
+import java.util.function.Predicate;
 
 public class AlbumImpl implements Album{
 
@@ -78,17 +79,34 @@ public class AlbumImpl implements Album{
 
 
     @Override
-    public Photo[] getAllPhotoFrom(int albumId)  {
-        return new Photo[0];
+    public Photo[] getAllPhotoFromAlbum(int albumId)  {
+        return findPhotoByPredicate(p -> p.getAlbumId() == albumId);
     }
 
     @Override
     public Photo[] getPhotoBetweenDate(LocalDate dateFrom, LocalDate dateTo) {
-        return new Photo[0];
+        // этот метод мы еще не реализовали
+        return findPhotoByPredicate(p -> p.getDate().toLocalDate().isAfter(dateFrom.minusDays(1)) && p.getDate().toLocalDate().isBefore(dateTo.plusDays(1)));
+
+        //(events[i].getData().isEqual(dateFrom) || events[i].getData().isAfter(dateFrom)) &&
+        //(events[i].getData().isEqual(dateTo) || events[i].getData().isBefore(dateTo)))
     }
 
     @Override
     public int size() {
         return size;
+    }
+
+    // служебный метод для отбора объектов из массива по критерию
+
+    private Photo[] findPhotoByPredicate(Predicate<Photo> predicate) {
+        Photo[] res = new Photo[size];
+        int j = 0; // это индексы массива результатов
+        for (int i = 0; i < size; i++) {
+            if(predicate.test(photos[i])){
+                res[j++] = photos[i];
+            }
+        }
+        return Arrays.copyOf(res, j); // обрезаем хвост из null
     }
 }

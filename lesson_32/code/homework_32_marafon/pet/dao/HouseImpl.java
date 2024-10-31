@@ -15,39 +15,25 @@ public class HouseImpl implements House {
     // capacity - возможное кол-во животных
     public HouseImpl(int capacity) {
         this.pets = new Pet[capacity];
-        this.size = size;
+        // this.size = size;
     }
 
-    public Pet[] getPets() {
-        return pets;
-    }
-
-    public void setPets(Pet[] pets) {
-        this.pets = pets;
-    }
-
-    public int getSize() {
-        return size;
-    }
-
-    public void setSize(int size) {
-        this.size = size;
-    }
 
     @Override
     public boolean addPet(Pet pet) {
         // bad cases
-        if (pet == null) {
-            return false;
-        }
-        if (size == pets.length) {
-            return false;
-        }
-        if (findPetByNickname(pet.getNickname()) != null) {
-            return false;
-        }
+//        if (pet == null) {
+//            return false;
+//        }
+//        if (size == pets.length) {
+//            return false;
+//        }
+//        if (findPetByNickname(pet.getNickname()) != null) {
+//            return false;
+//        }
         // good case
         pets[size] = pet; // put in array
+        System.out.println("Добавлено животное: " + pet.getNickname()); // Отладочный вывод
         size++;
         return true;
     }
@@ -89,8 +75,13 @@ public class HouseImpl implements House {
     }
 
     @Override
-    public Pet[] findPetByNickname(String nickname) {
-        return findPetByPredicate(pet -> pet.getNickname().equals(nickname));
+    public Pet findPetByNickname(String nickname) {
+        for (int i = 0; i < size; i++) {
+            if(pets[i].getNickname().equals(nickname)) {
+                return pets[i];
+            }
+        }
+        return null;
     }
 
     @Override

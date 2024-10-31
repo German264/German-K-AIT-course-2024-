@@ -10,9 +10,9 @@ public interface House {
 
     void printPet();
 
-    public Pet[] findPetByNickname(String nickname);
+    public Pet findPetByNickname(String nickname);
 
-    public Pet[] findDogByBreed(String nickname);
+    public Pet[] findDogByBreed(String breed);
 
     // find by breed
     public Pet[] findCatByBreed(String breed);

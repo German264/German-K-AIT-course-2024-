@@ -38,11 +38,11 @@ class ArchiveImplTest {
         assertFalse(archive.addDokument(null));
         //  - не добавлять дубликат
         assertFalse(archive.addDokument(dokuments[2]));
-        // добавляем еще одну новую
+        // добавляем еще один новую
         Dokument newDokument = new Dokument("T4", "A4", 1_111_111_114L, 2024);
         assertTrue(archive.addDokument(newDokument));
         assertEquals(5, archive.size());
-        // добавляем еще одну сверх capacity
+        // добавляем еще один сверх capacity
         Dokument oneMoreDok = new Dokument("T5", "A5", 1_111_111_115L, 2024);
         assertFalse(archive.addDokument(oneMoreDok));
     }
