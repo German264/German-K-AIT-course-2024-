@@ -5,7 +5,7 @@ import homework_32_marafon.pet.dao.HouseImpl;
 import homework_32_marafon.pet.model.Cat;
 import homework_32_marafon.pet.model.Dog;
 import homework_32_marafon.pet.model.Pet;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.BeforeEach;
 
 
@@ -91,7 +91,7 @@ public class HouseImplTest {        //???????????? public
 
     @Test
     public void updatePetTest() {
-        Pet updatePet = new Cat(04, "кошка", 6, "Шельма", "корниш", 30, 6);
+        Pet updatePet = new Cat(04, "кошка", 6, "NewName", "корниш", 30, 6);
         assertEquals("NewName", house.updatePet(updatePet).getNickname());
         house.printPet();
     }

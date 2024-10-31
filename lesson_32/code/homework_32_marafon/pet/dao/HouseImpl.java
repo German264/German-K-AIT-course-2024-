@@ -22,15 +22,15 @@ public class HouseImpl implements House {
     @Override
     public boolean addPet(Pet pet) {
         // bad cases
-//        if (pet == null) {
-//            return false;
-//        }
-//        if (size == pets.length) {
-//            return false;
-//        }
-//        if (findPetByNickname(pet.getNickname()) != null) {
-//            return false;
-//        }
+       if (pet == null) {
+            return false;
+       }
+        if (size == pets.length) {
+            return false;
+        }
+        if (findPetByNickname(pet.getNickname()) != null) {
+            return false;
+        }
         // good case
         pets[size] = pet; // put in array
         System.out.println("Добавлено животное: " + pet.getNickname()); // Отладочный вывод
