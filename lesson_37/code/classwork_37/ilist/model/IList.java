@@ -1,4 +1,4 @@
-package classwork_36.ilist.model;
+package classwork_37.ilist.model;
 
 public interface IList <E> extends Iterable<E>{
 
