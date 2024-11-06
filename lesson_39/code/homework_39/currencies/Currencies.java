@@ -11,6 +11,7 @@ public enum Currencies {
     CNY(7.47),       // Китайский юань
     RUB(104.38);     // Российский рубль
 
+
     private final double rateToEuro;
 
     Currencies(double rateToEuro) {

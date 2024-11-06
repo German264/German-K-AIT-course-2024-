@@ -4,8 +4,8 @@ import java.util.HashSet;
 import java.util.Set;
 
 public class StudentCourses {
-
     public static void main(String[] args) {
+
         // Студенты на курсе "Математика"
         Set<String> mathStudents = new HashSet<>();
         mathStudents.add("Иванов");
