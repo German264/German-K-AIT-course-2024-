@@ -1,13 +1,12 @@
-package classwork_40.ait.supermarket_linkedlist.test;
+package homework_40.supermarket_linkedlist.test;
 
-import classwork_40.ait.supermarket_linkedlist.dao.Supermarket;
-import classwork_40.ait.supermarket_linkedlist.dao.SupermarketImpl;
-import classwork_40.ait.supermarket_linkedlist.model.Product;
+import homework_40.supermarket_linkedlist.dao.Supermarket;
+import homework_40.supermarket_linkedlist.dao.SupermarketImpl;
+import homework_40.supermarket_linkedlist.model.Product;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.time.LocalDate;
-import java.util.ArrayList;
 import java.util.Arrays;
 
 import static org.junit.jupiter.api.Assertions.*;

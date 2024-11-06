@@ -1,7 +1,7 @@
-package classwork_40.ait.supermarket_linkedlist;
+package homework_40.supermarket_linkedlist;
 
-import classwork_40.ait.supermarket_linkedlist.dao.SupermarketImpl;
-import classwork_40.ait.supermarket_linkedlist.model.Product;
+import homework_40.supermarket_linkedlist.dao.SupermarketImpl;
+import homework_40.supermarket_linkedlist.model.Product;
 
 import java.time.LocalDate;
 

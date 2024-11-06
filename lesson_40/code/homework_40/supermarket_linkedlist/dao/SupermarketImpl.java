@@ -1,6 +1,6 @@
-package classwork_40.ait.supermarket_linkedlist.dao;
+package homework_40.supermarket_linkedlist.dao;
 
-import classwork_40.ait.supermarket_linkedlist.model.Product;
+import homework_40.supermarket_linkedlist.model.Product;
 
 import java.time.LocalDate;
 import java.util.*;
