@@ -9,6 +9,8 @@ import org.junit.jupiter.api.Test;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Comparator;
+import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -79,11 +81,15 @@ class SupermarketImplTest {
 
     @Test
     void findProductsWithExpiredDate() {
-        Iterable<Product> actual = supermarket.findProductsWithExpiredDate();
-        // sorting
-        Iterable<Product> expected = Arrays.asList(products[4], products[1]);
-        // sorting expected
-        assertIterableEquals(actual, expected);
+        // Получаем результат из метода и создаем отсортированный список для actual
+        List<Product> actualList = new ArrayList<>();
+        supermarket.findProductsWithExpiredDate().forEach(actualList::add);
+        actualList.sort(Comparator.comparing(Product::getExpDate));
+        // Ожидаемый результат также сортируем аналогично
+        List<Product> expectedList = Arrays.asList(products[1], products[4]);
+        expectedList.sort(Comparator.comparing(Product::getExpDate));
+        // Проверяем на равенство списков
+        assertIterableEquals(expectedList, actualList, "Списки не совпадают!");
     }
 
     @Test
